@@ -2,4 +2,5 @@
 
 UML:
 
-![class-diagram (1)](https://github.com/Sistrans-Seccion-02/B7/assets/111070716/f20df970-3ad2-4b06-9ba7-113830ea654e)
+![class-diagram (2)](https://github.com/Sistrans-Seccion-02/B7/assets/111070716/eaafb663-53b8-4063-8122-12cee4bfac02)
+
