@@ -8,15 +8,15 @@ import uniandes.edu.co.proyecto.modelo.Titular;
 
 import java.util.List;
 
-public interface UsuarioRepository extends JpaRepository<Titular, Long> {
+public interface TitularRepository extends JpaRepository<Titular, Long> {
 
     
 
-    @Query("SELECT e FROM Usuario e")
-    List<Titular> findAllUsuarios();
+    @Query("SELECT e FROM Titular e")
+    List<TitularRepository> findAllUsuarios();
 
-    @Query("SELECT e FROM Usuario e WHERE e.id = :id")
-    Titular findUsuarioById(@Param("id") Long id);
+    @Query("SELECT e FROM Titular e WHERE e.id = :id")
+    TitularRepository findUsuarioById(@Param("id") Long id);
     
     
 }
