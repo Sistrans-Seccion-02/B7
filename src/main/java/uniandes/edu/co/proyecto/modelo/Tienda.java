@@ -1,5 +1,10 @@
+package uniandes.edu.co.proyecto.modelo;
 
-package uniandes.edu.co.hotel.modelo;
+import java.util.List;
+
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 public class Tienda extends Servicio {
 

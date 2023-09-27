@@ -1,5 +1,8 @@
+package uniandes.edu.co.proyecto.modelo;
 
-package uniandes.edu.co.hotel.modelo;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 public class Alquiler extends Servicio {
 
