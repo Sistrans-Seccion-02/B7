@@ -1,99 +1,72 @@
-package uniandes.edu.co.proyecto.modelo;
+
+package uniandes.edu.co.hotel.modelo;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Table;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
+import java.util.List;
+
+
+package uniandes.edu.co.hotel.modelo;
+
 
 @Entity
-@Table(name = "USUARIO")
+@Table(name="usuario")
 public class Usuario {
 
+    @ManyToOne
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long numero;
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private Hotel hotel;
 
-    private String documento;
-    private String nombre;
-    private String correo;
-    private String rol;
-
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "reserva_alojamiento_id")
-    private ReservaAlojamiento reservaAlojamiento;
-
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "reserva_servicio_id")
-    private ReservaServicio reservaServicio;
-
-    public Usuario(String documento, String nombre, String correo, String rol, ReservaAlojamiento reservaAlojamiento, ReservaServicio reservaServicio) {
-        this.documento = documento;
-        this.nombre = nombre;
-        this.correo = correo;
-        this.rol = rol;
-        this.reservaAlojamiento = reservaAlojamiento;
-        this.reservaServicio = reservaServicio;
-    }
-
+    private String numeroDocumento;
+    private String TipoDocumento;
+    private String Rol;
+    private String Correo;
+    
     public Usuario() {;}
 
-    public Long getNumero() {
-        return numero;
+    public Usuario(String numeroDocumento, String TipoDocumento, String Rol, String Correo) {
+        this.numeroDocumento = numeroDocumento;
+        this.TipoDocumento = TipoDocumento;
+        this.Rol = Rol;
+        this.Correo = Correo;
     }
 
-    public void setNumero(Long numero) {
-        this.numero = numero;
+    public String getNumerodocumento() {
+        return numeroDocumento;
     }
 
-    public String getDocumento() {
-        return documento;
+    public void setNumerodocumento(String numeroDocumento) {
+        this.numeroDocumento = numeroDocumento;
     }
 
-    public void setDocumento(String documento) {
-        this.documento = documento;
+    public String getTipodocumento() {
+        return TipoDocumento;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public void setTipodocumento(String TipoDocumento) {
+        this.TipoDocumento = TipoDocumento;
     }
 
     public String getRol() {
-        return rol;
+        return Rol;
     }
 
-    public void setRol(String rol) {
-        this.rol = rol;
+    public void setRol(String Rol) {
+        this.Rol = Rol;
     }
 
-    public ReservaAlojamiento getReservaAlojamiento() {
-        return reservaAlojamiento;
+    public String getCorreo() {
+        return Correo;
     }
 
-    public void setReservaAlojamiento(ReservaAlojamiento reservaAlojamiento) {
-        this.reservaAlojamiento = reservaAlojamiento;
-    }
-
-    public ReservaServicio getReservaServicio() {
-        return reservaServicio;
-    }
-
-    public void setReservaServicio(ReservaServicio reservaServicio) {
-        this.reservaServicio = reservaServicio;
+    public void setCorreo(String Correo) {
+        this.Correo = Correo;
     }
 }
