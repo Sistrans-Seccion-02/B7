@@ -1,68 +1,45 @@
-package uniandes.edu.co.proyecto.modelo;
+
+package uniandes.edu.co.hotel.modelo;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Table;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
+import java.util.List;
+
+
+package uniandes.edu.co.hotel.modelo;
+
 
 @Entity
-@Table(name = "HABITACION")
+@Table(name="habitacion")
 public class Habitacion {
 
+    @ManyToOne
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long numero;
-
-    private String cuenta;
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private Hotel hotel;
 
     @ManyToOne
-    @JoinColumn(name = "tipo_habitacion_id")
     private TipoHabitacion tipoHabitacion;
 
-    @ManyToOne
-    @JoinColumn(name = "reserva_alojamiento_id")
-    private ReservaAlojamiento reservaAlojamiento;
-
-    public Habitacion(Long numero, String cuenta, TipoHabitacion tipoHabitacion) {
-        this.numero = numero;
-        this.cuenta = cuenta;
-        this.tipoHabitacion = tipoHabitacion;
-    }
-
+    private int numero;
+    
     public Habitacion() {;}
 
-    public Long getNumero() {
+    public Habitacion(int numero) {
+        this.numero = numero;
+    }
+
+    public int getNumero() {
         return numero;
     }
 
-    public void setNumero(Long numero) {
+    public void setNumero(int numero) {
         this.numero = numero;
-    }
-
-    public String getCuenta() {
-        return cuenta;
-    }
-
-    public void setCuenta(String cuenta) {
-        this.cuenta = cuenta;
-    }
-
-    public TipoHabitacion getTipoHabitacion() {
-        return tipoHabitacion;
-    }
-
-    public void setTipoHabitacion(TipoHabitacion tipoHabitacion) {
-        this.tipoHabitacion = tipoHabitacion;
-    }
-
-    public ReservaAlojamiento getReservaAlojamiento() {
-        return reservaAlojamiento;
-    }
-
-    public void setReservaAlojamiento(ReservaAlojamiento reservaAlojamiento) {
-        this.reservaAlojamiento = reservaAlojamiento;
     }
 }

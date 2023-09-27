@@ -16,24 +16,27 @@ package uniandes.edu.co.hotel.modelo;
 
 
 @Entity
-@Table(name="producto")
-public class Producto {
+@Table(name="estadia")
+public class Estadia {
 
     @ManyToOne
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
+    private Reserva reserva;
+
+    @OneToOne
     private Factura factura;
 
     private int id;
-    private double precio;
-    private String nombre;
+    private Date fechaLlegada;
+    private Date fechaSalida;
     
-    public Producto() {;}
+    public Estadia() {;}
 
-    public Producto(int id, double precio, String nombre) {
+    public Estadia(int id, Date fechaLlegada, Date fechaSalida) {
         this.id = id;
-        this.precio = precio;
-        this.nombre = nombre;
+        this.fechaLlegada = fechaLlegada;
+        this.fechaSalida = fechaSalida;
     }
 
     public int getId() {
@@ -44,19 +47,19 @@ public class Producto {
         this.id = id;
     }
 
-    public double getPrecio() {
-        return precio;
+    public Date getFechallegada() {
+        return fechaLlegada;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
+    public void setFechallegada(Date fechaLlegada) {
+        this.fechaLlegada = fechaLlegada;
     }
 
-    public String getNombre() {
-        return nombre;
+    public Date getFechasalida() {
+        return fechaSalida;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setFechasalida(Date fechaSalida) {
+        this.fechaSalida = fechaSalida;
     }
 }

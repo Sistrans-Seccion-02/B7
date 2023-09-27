@@ -1,35 +1,39 @@
-package uniandes.edu.co.proyecto.modelo;
+
+package uniandes.edu.co.hotel.modelo;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
+import java.util.List;
+
+
+package uniandes.edu.co.hotel.modelo;
+
 
 @Entity
-@Table(name = "TIPO_HABITACION")
+@Table(name="tipohabitacion")
 public class TipoHabitacion {
 
+    @ManyToOne
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private Hotel hotel;
 
     private String nombre;
-    private String descripcion;
-
-    public TipoHabitacion(String nombre, String descripcion) {
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-    }
-
+    private int capacidad;
+    private String dotacion;
+    
     public TipoHabitacion() {;}
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+    public TipoHabitacion(String nombre, int capacidad, String dotacion) {
+        this.nombre = nombre;
+        this.capacidad = capacidad;
+        this.dotacion = dotacion;
     }
 
     public String getNombre() {
@@ -40,12 +44,19 @@ public class TipoHabitacion {
         this.nombre = nombre;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public int getCapacidad() {
+        return capacidad;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
+    }
+
+    public String getDotacion() {
+        return dotacion;
+    }
+
+    public void setDotacion(String dotacion) {
+        this.dotacion = dotacion;
     }
 }
-

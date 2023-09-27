@@ -1,27 +1,41 @@
-package uniandes.edu.co.proyecto.modelo;
+
+package uniandes.edu.co.hotel.modelo;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
+import java.util.List;
+
+
+package uniandes.edu.co.hotel.modelo;
+
 
 @Entity
-@Table(name = "PLAN_CONSUMO")
-public class PlanConsumo {
+@Table(name="plan")
+public class Plan {
 
+    @ManyToOne
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private Reserva reserva;
+
+    @ManyToOne
+    private Titular titular;
+
     private String nombre;
-
     private String descripcion;
+    
+    public Plan() {;}
 
-    public PlanConsumo(String nombre, String descripcion) {
+    public Plan(String nombre, String descripcion) {
         this.nombre = nombre;
         this.descripcion = descripcion;
     }
-
-    public PlanConsumo() {;}
 
     public String getNombre() {
         return nombre;
