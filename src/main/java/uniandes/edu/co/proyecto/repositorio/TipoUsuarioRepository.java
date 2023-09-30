@@ -11,7 +11,7 @@ public interface TipoUsuarioRepository extends JpaRepository<Usuario, Long> {
 
     
 
-    @Query("SELECT e FROM TipoUsuario e")
+    @Query("SELECT * FROM TipoUsuario e")
     List<Usuario> findAllTipoUsuarios();
 
     @Query("SELECT e FROM TipoUsuario e WHERE e.id = :id")
