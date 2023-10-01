@@ -1,66 +1,76 @@
 package uniandes.edu.co.proyecto.modelo;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-
-
-
+import jakarta.persistence.Table;
 
 @Entity
-@Table(name="usuario")
+@Table(name="USUARIOS")
+
 public class Usuario {
 
-    @ManyToOne
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private String numeroDocumento;
-
-    private String TipoDocumento;
-    private String Rol;
-    private String Correo;
+    private Integer num_documento;
     
-    public Usuario() {;}
+    private String tipo_documento;
+    private String nombre;
+    private String correo;
 
-    public Usuario(String numeroDocumento, String TipoDocumento, String Rol, String Correo) {
-        this.numeroDocumento = numeroDocumento;
-        this.TipoDocumento = TipoDocumento;
-        this.Rol = Rol;
-        this.Correo = Correo;
+    @ManyToOne
+    @JoinColumn(name = "tipo_usuario", referencedColumnName = "id")
+     private TipoUsuario tipo_usuario;
+
+    public Usuario(Integer num_documento, String tipo_documento, String nombre, String correo,
+            TipoUsuario tipo_usuario) {
+        this.num_documento = num_documento;
+        this.tipo_documento = tipo_documento;
+        this.nombre = nombre;
+        this.correo = correo;
+        this.tipo_usuario = tipo_usuario;
     }
 
-    public String getNumerodocumento() {
-        return numeroDocumento;
+    public Integer getNum_documento() {
+        return num_documento;
     }
 
-    public void setNumerodocumento(String numeroDocumento) {
-        this.numeroDocumento = numeroDocumento;
+    public void setNum_documento(Integer num_documento) {
+        this.num_documento = num_documento;
     }
 
-    public String getTipodocumento() {
-        return TipoDocumento;
+    public String getTipo_documento() {
+        return tipo_documento;
     }
 
-    public void setTipodocumento(String TipoDocumento) {
-        this.TipoDocumento = TipoDocumento;
+    public void setTipo_documento(String tipo_documento) {
+        this.tipo_documento = tipo_documento;
     }
 
-    public String getRol() {
-        return Rol;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setRol(String Rol) {
-        this.Rol = Rol;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getCorreo() {
-        return Correo;
+        return correo;
     }
 
-    public void setCorreo(String Correo) {
-        this.Correo = Correo;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
+
+    public TipoUsuario getTipo_usuario() {
+        return tipo_usuario;
+    }
+
+    public void setTipo_usuario(TipoUsuario tipo_usuario) {
+        this.tipo_usuario = tipo_usuario;
+    }
+
+    
+     
 }
