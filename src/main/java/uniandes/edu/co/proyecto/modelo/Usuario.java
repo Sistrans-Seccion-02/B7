@@ -22,6 +22,9 @@ public class Usuario {
     @JoinColumn(name = "tipo_usuario", referencedColumnName = "id")
      private TipoUsuario tipo_usuario;
 
+     
+     public Usuario() {;}
+
     public Usuario(Integer num_documento, String tipo_documento, String nombre, String correo,
             TipoUsuario tipo_usuario) {
         this.num_documento = num_documento;

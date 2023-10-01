@@ -5,20 +5,21 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.persistence.ManyToOne;
+
 
 
 
 
 @Entity
-@Table(name="tipohabitacion")
+@Table(name="TIPOS_HABITACION")
 public class TipoHabitacion {
 
-    @ManyToOne
+   
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private String nombre;
+    @GeneratedValue(strategy = GenerationType.AUTO )
+    private Integer id;
 
+    private String nombre;
     private int capacidad;
     private String dotacion;
     
@@ -52,5 +53,13 @@ public class TipoHabitacion {
 
     public void setDotacion(String dotacion) {
         this.dotacion = dotacion;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }

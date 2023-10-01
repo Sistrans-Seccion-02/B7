@@ -16,6 +16,7 @@ public class TipoUsuario {
 
     private String nombre;
     private String descripcion;
+    public TipoUsuario() {;}
 
     public TipoUsuario( String nombre, String descripcion) {
        
