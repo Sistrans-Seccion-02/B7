@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="B7F05850-B644-1869-0271-5429A50D7FA4" mainViewID="E61F5970-B418-F330-AA85-2AFD5B757BB6">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:03:52 UTC</createdTime>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

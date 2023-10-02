@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0709E37A-B38C-E326-6001-FFAA924591D0" name="Tipos_habitaciones">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-02 01:36:59 UTC</createdTime>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<engineerTo>
+<item key="D4258667-E873-C076-B69E-DEC9E2A76BC0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="numero_habitacion" id="CB6981CD-43CB-EB0B-F762-61D22D9A9AEA">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-02 01:37:41 UTC</createdTime>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<engineerTo>
+<item key="D4258667-E873-C076-B69E-DEC9E2A76BC0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="A5680AF2-0DD5-2F94-3008-0205D4265AE6">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-02 01:37:49 UTC</createdTime>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<engineerTo>
+<item key="D4258667-E873-C076-B69E-DEC9E2A76BC0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="capacidad" id="3630DF7C-3101-19B4-FD87-C64B0747E2C7">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-02 01:37:57 UTC</createdTime>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<engineerTo>
+<item key="D4258667-E873-C076-B69E-DEC9E2A76BC0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dotación" id="AFB342BB-6C0B-1D85-61B8-11AF811E6750">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-02 01:38:05 UTC</createdTime>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<engineerTo>
+<item key="D4258667-E873-C076-B69E-DEC9E2A76BC0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

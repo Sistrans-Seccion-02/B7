@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="676AE365-76CF-9175-1F90-9CB8EBBEA6E7" name="Productos">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>0FB2AD96-07D9-B83A-B483-48450B99D846</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_producto" id="5F670DD7-E22C-09DA-D337-E033C2637D34">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>7EE8C70A-95B8-247B-ADD0-A8C7256A3498</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="precio" id="349CB663-5BA3-F371-8378-20C3A35D1C92">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>CF9ACF83-2325-717A-9E10-2DB621430F79</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="9EFBA56F-A1D3-5B27-F254-8D1E7C1C14E8">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>0C383CB4-059F-B4FC-8D5C-B1D7A60FB616</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Facturas_id_factura" id="BCF2EB62-78B4-11F6-7CFD-537373558612">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>F1151B10-AC2D-05D1-99E5-5DC5121F0757</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D04DE531-A5D4-89DF-31B7-B9732D7225D4" referredColumn="24F87E65-72DF-F6B9-F097-36FD09A99AD4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5067F59E-6071-7E5B-DD75-578A254E592C" name="Productos_Facturas_FK">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>895801AB-2CFB-8308-4530-4C4F7F925D17</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BCF2EB62-78B4-11F6-7CFD-537373558612"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

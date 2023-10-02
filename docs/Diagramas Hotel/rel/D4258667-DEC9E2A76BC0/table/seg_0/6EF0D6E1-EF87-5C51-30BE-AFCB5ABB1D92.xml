@@ -1,0 +1,135 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6EF0D6E1-EF87-5C51-30BE-AFCB5ABB1D92" name="Titulares">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>98B85079-9500-1164-C81A-B86C63FD00F5</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="dni" id="36774D9D-7044-EFB8-4D4D-1D85D7E327AA">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>E7923F76-7467-CA7A-B7BD-0A28E2EA539D</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="7977FA4D-CD29-90B5-F8A8-2AA516F06B12">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>263B6BEB-D6C0-1585-032E-7F40041852EF</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="correo" id="6C7D490D-3D39-F352-A30A-59D8DB03E45B">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>1EFA39DD-3AA9-7730-E17F-9278522F8D4E</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="acompañantes" id="C274BFF8-B614-15BA-A09B-2CB8C8EC41FD">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>C3C3A510-9ACA-B0B9-ABB3-871D783459B7</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Reservas_id" id="DDA5D664-7E3D-C495-0765-EA358B1A1DE3">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>4D09F922-2656-F7AD-35B1-11A981524CB8</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3824EB64-BE90-3BA3-DC7F-B9612EC67193" referredColumn="F548707F-5BE2-F905-0470-7010A4B7C180"/>
+</associations>
+</Column>
+<Column name="nombre1" id="975E8ECE-38A1-44E2-61DF-D3C070E85840">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>5DB42AA8-4337-697F-79B0-655CE2B05C1F</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<dependOnForeignKeyID>3824EB64-BE90-3BA3-DC7F-B9612EC67193</dependOnForeignKeyID>
+</Column>
+<Column name="descripción" id="3CCEC0CE-B479-4367-E62F-0CF7C23F31FF">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>815A1787-FB18-732E-FFC5-B6738EC03B94</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<dependOnForeignKeyID>3824EB64-BE90-3BA3-DC7F-B9612EC67193</dependOnForeignKeyID>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="88CE2CD6-A9DE-7321-6299-9D078A168F0F" name="Titulares_PK">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>71062741-11A1-103D-2823-169CCB4FDA12</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="36774D9D-7044-EFB8-4D4D-1D85D7E327AA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="224F6A3B-68BB-3A3F-68BB-AF0B8BEA52AF" name="Titulares__IDX">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>C77FCDDA-F9B3-85D0-AD92-089B1F0D6AAB</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="DDA5D664-7E3D-C495-0765-EA358B1A1DE3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FC7E0843-B051-D051-6FDC-C911967F21A8" name="Titulares_Reservas_FK">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>C77FCDDA-F9B3-85D0-AD92-089B1F0D6AAB</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DDA5D664-7E3D-C495-0765-EA358B1A1DE3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

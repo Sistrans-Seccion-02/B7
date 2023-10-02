@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9711CF80-09CD-AE26-66D3-477CE054CC7A" name="Tipos_usuarios">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-02 01:39:52 UTC</createdTime>
+<generatorID>7B209E42-A5BE-A8EF-672D-98530B9ACC05</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_usuario" id="697B3F08-E5ED-3C61-2EEB-8E58F2AE320B">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-02 01:39:52 UTC</createdTime>
+<generatorID>95DB7D3D-6B93-FAEB-8D33-124C20D4E234</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="B87B0E09-2D0D-C4A6-7794-7FE013E47D2B">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-02 01:39:52 UTC</createdTime>
+<generatorID>1836A802-9362-FCC4-8F48-26FC8D6D1434</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripción" id="97F5F58E-BDA3-6080-B164-8C607781D4F8">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-02 01:39:52 UTC</createdTime>
+<generatorID>85050F1D-BF89-2927-41A3-452508B2A7D7</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F0A0A2E2-3FA0-F864-8A8F-1AB186C1E2EC" name="Tipos_usuarios_PK">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-02 01:39:52 UTC</createdTime>
+<generatorID>F3153D0B-CD95-EF91-817B-838210F94A60</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="697B3F08-E5ED-3C61-2EEB-8E58F2AE320B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

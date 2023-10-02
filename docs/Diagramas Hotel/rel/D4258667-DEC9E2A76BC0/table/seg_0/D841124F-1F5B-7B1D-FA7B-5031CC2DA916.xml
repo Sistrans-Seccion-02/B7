@@ -1,0 +1,121 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D841124F-1F5B-7B1D-FA7B-5031CC2DA916" name="Usuarios">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>D52EC43B-EA77-3390-F50F-E1750968EA62</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="documento" id="E09AF37E-B53F-F85B-4D74-003BC0990841">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>96A146C3-1638-0333-7B47-8BAD868B4AAF</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo_documento" id="20F3643A-93C3-FA20-C9F7-F3FEC7572BED">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>FA4899E2-8D05-8405-D063-0868437332C4</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rol" id="9B484ED5-396F-4FFE-7873-5451F57C4A51">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>93E43F54-E80F-9248-E560-FB6E3190BE31</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="correo" id="553E1DB6-E71D-7067-B8A5-46C438841890">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>4F805A7D-3921-0453-38EF-FE4E796D2357</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Hotel_Hotel_ID" id="BBE0F534-A189-267D-E843-899D06F324BD">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="48228D10-7CA2-5821-ADC9-87C7D4336A58" referredColumn="1308D9FA-C86E-E7F0-5478-E2EF33875E0E"/>
+</associations>
+</Column>
+<Column name="Tipos_usuarios_id_usuario" id="BF2F909D-DADE-88FF-7D17-4BBBC443D874">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-02 01:46:44 UTC</createdTime>
+<generatorID>DCD1CDA8-851A-5C92-336D-58549876F41E</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AF52D9A6-29E6-0A66-C5AB-1263F86691AA" referredColumn="697B3F08-E5ED-3C61-2EEB-8E58F2AE320B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1F430C60-1F9E-76BB-6725-1C4108D5D14E" name="Usuarios_PK">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>C287318E-90DD-8678-1E91-A0C7E4EBD179</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E09AF37E-B53F-F85B-4D74-003BC0990841"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="84DB9E82-A68B-D382-F11D-AD8D5036E0D3" name="Usuarios_Hotel_FK">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>0F8A2EB7-D30E-4271-4BAB-E304E946320B</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BBE0F534-A189-267D-E843-899D06F324BD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="09AEE959-D3A3-227A-E7C5-E7A3AE2FCC37" name="Usuarios_Tipos_usuarios_FK">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-02 01:46:44 UTC</createdTime>
+<generatorID>068EE298-8257-010A-AA2E-9C1B7BEA987E</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BF2F909D-DADE-88FF-7D17-4BBBC443D874"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

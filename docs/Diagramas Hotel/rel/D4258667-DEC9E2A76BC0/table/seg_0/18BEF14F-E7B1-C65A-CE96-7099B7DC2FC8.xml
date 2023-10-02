@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="18BEF14F-E7B1-C65A-CE96-7099B7DC2FC8" name="Estadías">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>1C15DC37-9260-9DA5-441F-828239F8B274</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="E333EA5A-7652-A134-8E78-5F3F1370CC7A">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>A23E31A0-816B-49F2-0669-E080C22CA87E</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_llegada" id="831C1841-C7C9-76BF-7EF6-D5220DC41C17">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>DB40E695-80DD-CFD6-14D5-22C9BF4C1561</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_salida" id="A003B513-04DB-FA85-6037-2C7C606029C5">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>F25EB8A9-CC77-8898-068A-25AA08CDBED8</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Reservas_id" id="7461D0AC-ACD7-31F4-172F-ED701F0E4583">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>28026E25-A114-5C00-1C07-6CAD970EA288</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="88938C75-D368-93EC-A79D-7E169F4443F0" referredColumn="F548707F-5BE2-F905-0470-7010A4B7C180"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="56449D27-A536-942D-4C22-2357D9507E3E" name="Estadías_PK">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>6C320D5F-95AF-62DE-727D-7E3A336CA5F8</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E333EA5A-7652-A134-8E78-5F3F1370CC7A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0FBEE645-270B-C391-EB0E-AF3C3B4CBE24" name="Estadías__IDX">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>9449CCDD-CC64-9D81-3064-92F8D4DBABC3</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="7461D0AC-ACD7-31F4-172F-ED701F0E4583"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="44494124-33AB-9600-C128-7D8D035C2E1E" name="Estadías_Reservas_FK">
+<createdBy>JUAN PABLO</createdBy>
+<createdTime>2023-10-01 22:25:56 UTC</createdTime>
+<generatorID>9449CCDD-CC64-9D81-3064-92F8D4DBABC3</generatorID>
+<ownerDesignName>Diagramas Hotel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7461D0AC-ACD7-31F4-172F-ED701F0E4583"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
