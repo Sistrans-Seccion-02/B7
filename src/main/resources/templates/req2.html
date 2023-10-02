@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requerimiento 2 Usuario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0074cc;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            margin: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .center-container {
+            text-align: center;
+            margin: 0 auto; /* Centrar horizontalmente */
+            max-width: 400px; /* Ancho máximo del contenedor */
+        }
+
+        /* Estilos para el formulario */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            text-align: left;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: white;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Estilos para el botón Aceptar */
+        #crear-datos {
+            background-color: #0074cc;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        /* Estilos para el contenedor de datos */
+        .data-container {
+            text-align: left;
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Requerimiento 2 Usuario</h1>
+
+    <div class="container">
+        <div class="center-container">
+            <button class="button" id="create-btn">Crear</button>
+            <button class="button" id="update-btn">Actualizar</button>
+            <button class="button" id="delete-btn">Eliminar</button>
+            <button class="button" id="query-btn">Consultar</button>
+        </div>
+    </div>
+
+    <!-- Ventana modal para crear datos -->
+    <div class="modal" id="modal">
+        <div class="center-container">
+            <div class="form-container">
+                <h2>Crear Usuario</h2>
+                <label for="tipo-documento">Tipo de documento:</label>
+                <input type="text" id="tipo-documento" required><br><br>
+                <label for="numero-documento">Número de documento:</label>
+                <input type="number" id="numero-documento" required><br><br>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required><br><br>
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" required><br><br>
+                <label for="rol">Rol:</label>
+                <input type="text" id="rol" required><br><br>
+                <button id="crear-datos">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor de datos ingresados -->
+    <div class="center-container">
+        <div class="data-container" id="data-container">
+            <h2>Datos Ingresados:</h2>
+            <!-- Aquí se mostrarán los datos ingresados -->
+        </div>
+    </div>
+
+    <script>
+        // JavaScript para mostrar/ocultar la ventana modal
+        var createBtn = document.getElementById("create-btn");
+        var modal = document.getElementById("modal");
+
+        createBtn.onclick = function() {
+            modal.style.display = "block"; // Mostrar la ventana modal
+        }
+
+        // JavaScript para procesar el formulario de creación de datos
+        var crearDatosBtn = document.getElementById("crear-datos");
+        var dataContainer = document.getElementById("data-container");
+
+        crearDatosBtn.onclick = function() {
+            // Recopilar datos ingresados por el usuario
+            var tipoDocumento = document.getElementById("tipo-documento").value;
+            var numeroDocumento = document.getElementById("numero-documento").value;
+            var nombre = document.getElementById("nombre").value;
+            var correo = document.getElementById("correo").value;
+            var rol = document.getElementById("rol").value;
+
+            // Crear un nuevo elemento para mostrar los datos
+            var newData = document.createElement("div");
+            newData.innerHTML = "<strong>Tipo de documento:</strong> " + tipoDocumento + "<br>" +
+                                "<strong>Número de documento:</strong> " + numeroDocumento + "<br>" +
+                                "<strong>Nombre:</strong> " + nombre + "<br>" +
+                                "<strong>Correo electrónico:</strong> " + correo + "<br>" +
+                                "<strong>Rol:</strong> " + rol;
+
+            // Agregar el nuevo elemento al contenedor de datos
+            dataContainer.appendChild(newData);
+
+            // Ocultar la ventana modal después de agregar los datos
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
