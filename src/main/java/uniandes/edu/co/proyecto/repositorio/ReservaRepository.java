@@ -43,6 +43,6 @@ public interface ReservaRepository extends JpaRepository<Reserva, Long> {
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO reserva (id, titular, plan, tarifatotal, fecha_llegada, fecha_salida) VALUES ( parranderos_sequence.nextval , :titular, :plan, :tarifatotal, :fecha_llegada, :fecha_salida)", nativeQuery = true)
+    @Query(value = "INSERT INTO reserva (id, titular, plan, tarifatotal, fecha_llegada, fecha_salida) VALUES (  Misecuencia.nextval , :titular, :plan, :tarifatotal, :fecha_llegada, :fecha_salida)", nativeQuery = true)
     void insertarReserva(@Param("titular") String titular, @Param("plan") String plan, @Param("tarifatotal") Long tarifatotal, @Param("fecha_llegada") Date fecha_llegada, @Param("fecha_salida") Date fecha_salida);    
 }
