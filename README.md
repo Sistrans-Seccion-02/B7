@@ -16,3 +16,6 @@ Opción 2: Ejecutando el HTML de Forma Local
 Abre el archivo HTML principal en tu navegador web. Puedes hacerlo simplemente haciendo doble clic en el archivo o arrastrándolo y soltándolo en tu navegador.
 La página se abrirá en tu navegador localmente.
 Aunque en esta iteración del proyecto no logramos unificar todos los componentes, es importante destacar que las partes individuales funcionan correctamente. Esperamos que esta guía te ayude a empezar y que disfrutes explorando el proyecto. ¡Si tienes alguna pregunta o encuentras algún problema, no dudes en contactarnos!
+
+
+EN TOTAL HAY 7/11 REQUERIMIENTOS FUNCIONALES PERO COMO SE ESPECIFICO EN EL INFORME FINAL NO LOGRAMOS CONECTARLO CON LA PAGINA WEB
