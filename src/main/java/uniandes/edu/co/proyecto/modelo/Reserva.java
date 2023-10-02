@@ -17,20 +17,12 @@ import java.sql.Date;
 @Table(name="reserva")
 public class Reserva {
 
-    @ManyToOne
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private Habitacion habitacion;
+    private String id_habitacion;
 
-    @ManyToOne
-    private Titular titular;
-
-    @ManyToOne
-    private Plan plan;
-
-    @OneToOne
-    private Estadia estadia;
-
+    private String titular;
+    private String plan;
     private int numero;
     private double tarifatotal;
     private Date fechallegada;
@@ -39,21 +31,41 @@ public class Reserva {
     
     public Reserva() {;}
 
-    public Reserva(int numero, double tarifatotal, Date fechallegada, Date fechasalida, int cantidadpersonas) {
-        this.numero = numero;
+    public Reserva(String id_habitacion, String titular, String plan, double tarifatotal, Date fechallegada,
+            Date fechasalida, int cantidadpersonas) {
+        this.id_habitacion = id_habitacion;
+        this.titular = titular;
+        this.plan = plan;
         this.tarifatotal = tarifatotal;
         this.fechallegada = fechallegada;
         this.fechasalida = fechasalida;
         this.cantidadpersonas = cantidadpersonas;
     }
 
-    public int getNumero() {
-        return numero;
+    public String getId_habitacion() {
+        return id_habitacion;
     }
 
-    public void setNumero(int numero) {
-        this.numero = numero;
+    public void setId_habitacion(String id_habitacion) {
+        this.id_habitacion = id_habitacion;
     }
+
+    public String getTitular() {
+        return titular;
+    }
+
+    public void setTitular(String titular) {
+        this.titular = titular;
+    }
+
+    public String getPlan() {
+        return plan;
+    }
+
+    public void setPlan(String plan) {
+        this.plan = plan;
+    }
+
 
     public double getTarifatotal() {
         return tarifatotal;
@@ -86,4 +98,7 @@ public class Reserva {
     public void setCantidadpersonas(int cantidadpersonas) {
         this.cantidadpersonas = cantidadpersonas;
     }
+
+    
+
 }

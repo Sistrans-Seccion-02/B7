@@ -15,12 +15,12 @@ public interface PlanRepository extends JpaRepository<Plan, Long> {
     
     //Ver todos los planes
 
-    @Query("SELECT * FROM plan e")
+    @Query(value="SELECT * FROM plan", nativeQuery = true)
     List<Plan> findAllPlans();
 
     //Ver el plan con id dada
 
-    @Query("SELECT * FROM plan WHERE id = :id")
+    @Query(value="SELECT * FROM plan WHERE id = :id", nativeQuery = true)
     Plan findPlanById(@Param("id") Long id);
 
     //Eliminar plan con un id dado
@@ -34,7 +34,7 @@ public interface PlanRepository extends JpaRepository<Plan, Long> {
 
     @Modifying
     @Transactional
-    @Query(value = "UPDATE bebedores SET nombre = :nombre, descripcion = :descripcion WHERE id = :id", nativeQuery = true)
+    @Query(value = "UPDATE plan SET nombre = :nombre, descripcion = :descripcion WHERE id = :id", nativeQuery = true)
     void actualizarPlan(@Param("id") long id, @Param("nombre") String nombre, @Param("descripcion") String descripcion);
 
     //Insertar un nuevo plan

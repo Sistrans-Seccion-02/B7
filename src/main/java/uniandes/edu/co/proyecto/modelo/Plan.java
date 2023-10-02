@@ -14,22 +14,19 @@ import jakarta.persistence.ManyToOne;
 @Table(name="plan")
 public class Plan {
 
-    @ManyToOne
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private Reserva reserva;
-
-    @ManyToOne
-    private Titular titular;
+    private Long id;
 
     private String nombre;
     private String descripcion;
     
     public Plan() {;}
 
-    public Plan(String nombre, String descripcion) {
+    public Plan(Long id, String nombre, String descripcion) {
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.id= id;
     }
 
     public String getNombre() {
@@ -38,6 +35,14 @@ public class Plan {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public Long getId(){
+        return id;
+    }
+
+    public void setId(Long id){
+        this.id = id;
     }
 
     public String getDescripcion() {
