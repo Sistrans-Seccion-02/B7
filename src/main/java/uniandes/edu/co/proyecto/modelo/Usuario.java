@@ -13,7 +13,7 @@ public class Usuario {
 
     @Id
     private Integer num_documento;
-    
+
     private String tipo_documento;
     private String nombre;
     private String correo;
@@ -22,8 +22,6 @@ public class Usuario {
     @JoinColumn(name = "tipo_usuario", referencedColumnName = "id")
      private TipoUsuario tipo_usuario;
 
-     
-     public Usuario() {;}
 
     public Usuario(Integer num_documento, String tipo_documento, String nombre, String correo,
             TipoUsuario tipo_usuario) {
@@ -33,7 +31,9 @@ public class Usuario {
         this.correo = correo;
         this.tipo_usuario = tipo_usuario;
     }
-
+    
+    public Usuario() {;}
+    
     public Integer getNum_documento() {
         return num_documento;
     }

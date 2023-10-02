@@ -22,10 +22,7 @@ public class HabitacionController {
         return habitacionRepository.findAll();
     }
 
-    @GetMapping("/habitacionId")
-    public Habitacion getHabitacionById(@PathVariable Long habitacionId) {
-        return habitacionRepository.findById(habitacionId).orElse(null);
-    }
+
     
     
 }

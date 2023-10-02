@@ -23,9 +23,5 @@ public class TipoHabitacionController {
         return tipohabitacionRepository.findAll();
     }
 
-    @GetMapping("/tipohabitacionId")
-    public TipoHabitacion getTipoHabitacionById(@PathVariable Long tipohabitacionId) {
-        return tipohabitacionRepository.findById(tipohabitacionId).orElse(null);
-    }
-    
+ 
 }

@@ -7,23 +7,23 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="TIPOS_USUARIO")
+@Table(name="tipos_usuario")
 public class TipoUsuario {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO )
+    @GeneratedValue(strategy = GenerationType.AUTO )    
+    
     private Integer id;
-
     private String nombre;
     private String descripcion;
-    public TipoUsuario() {;}
+    
 
     public TipoUsuario( String nombre, String descripcion) {
        
         this.nombre = nombre;
         this.descripcion = descripcion;
     }
-
+    public TipoUsuario() {;}
     public Integer getId() {
         return id;
     }

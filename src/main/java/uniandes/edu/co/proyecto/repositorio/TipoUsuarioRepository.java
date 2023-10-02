@@ -15,7 +15,7 @@ import uniandes.edu.co.proyecto.modelo.TipoUsuario;
 
 public interface TipoUsuarioRepository extends JpaRepository<TipoUsuario,Integer>{
 
-    @Query(value = "SELECT * FROM TIPOS_USUARIO", nativeQuery = true)
+    @Query(value = "SELECT * FROM tipos_usuario", nativeQuery = true)
     Collection<TipoUsuario> darTiposUsuario();    
     
     @Query(value = "SELECT * FROM TIPOS_USUARIO WHERE id= :id", nativeQuery = true)

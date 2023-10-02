@@ -23,14 +23,14 @@ public class TipoHabitacion {
     private int capacidad;
     private String dotacion;
     
-    public TipoHabitacion() {;}
+ 
 
     public TipoHabitacion(String nombre, int capacidad, String dotacion) {
         this.nombre = nombre;
         this.capacidad = capacidad;
         this.dotacion = dotacion;
     }
-
+    public TipoHabitacion() {;}
     public String getNombre() {
         return nombre;
     }

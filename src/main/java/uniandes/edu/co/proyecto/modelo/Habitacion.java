@@ -25,7 +25,7 @@ public class Habitacion {
     private TipoHabitacion tipoHabitacion;
 
     
-    public Habitacion() {;}
+   
 
 
     public Habitacion(Integer numero, TipoHabitacion tipoHabitacion) {
@@ -33,7 +33,7 @@ public class Habitacion {
         this.tipoHabitacion = tipoHabitacion;
     }
 
-
+    public Habitacion() {;}
     public Integer getNumero() {
         return numero;
     }
