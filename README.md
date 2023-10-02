@@ -1,6 +1,18 @@
 # Proyecto SISTRANS
+¡Bienvenido al proyecto! Aquí encontrarás las instrucciones necesarias para ejecutar correctamente la aplicación. Aunque no logramos unificar todos los componentes en esta iteración, te explicaremos cómo ejecutar la parte de la base de datos y cómo visualizar la interfaz HTML por separado.
 
-UML:
+Conexión a la Base de Datos
+Abre tu cliente de bases de datos preferido.
+Conéctate a la base de datos utilizando tu usuario y contraseña habituales.
+Visualización de la Interfaz HTML
+Puedes visualizar la interfaz HTML de dos maneras diferentes:
 
-![class-diagram (2)](https://github.com/Sistrans-Seccion-02/B7/assets/111070716/eaafb663-53b8-4063-8122-12cee4bfac02)
-
+Opción 1: Usando la Extensión Live Server (Recomendado)
+Si usas Visual Studio Code, asegúrate de tener instalada la extensión "Live Server".
+Abre el archivo HTML principal de la interfaz en Visual Studio Code.
+Haz clic derecho en el archivo HTML y selecciona "Open with Live Server".
+La página se abrirá automáticamente en tu navegador web predeterminado.
+Opción 2: Ejecutando el HTML de Forma Local
+Abre el archivo HTML principal en tu navegador web. Puedes hacerlo simplemente haciendo doble clic en el archivo o arrastrándolo y soltándolo en tu navegador.
+La página se abrirá en tu navegador localmente.
+Aunque en esta iteración del proyecto no logramos unificar todos los componentes, es importante destacar que las partes individuales funcionan correctamente. Esperamos que esta guía te ayude a empezar y que disfrutes explorando el proyecto. ¡Si tienes alguna pregunta o encuentras algún problema, no dudes en contactarnos!
