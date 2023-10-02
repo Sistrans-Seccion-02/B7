@@ -41,6 +41,6 @@ public interface PlanRepository extends JpaRepository<Plan, Long> {
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO plan (id, nombre, descripcion) VALUES ( parranderos_sequence.nextval , :nombre,:descripcion)", nativeQuery = true)
+    @Query(value = "INSERT INTO plan (id, nombre, descripcion) VALUES ( secuencia.nextval , :nombre,:descripcion)", nativeQuery = true)
     void insertarPlan(@Param("nombre") String nombre, @Param("descripcion") String descripcion);    
 }

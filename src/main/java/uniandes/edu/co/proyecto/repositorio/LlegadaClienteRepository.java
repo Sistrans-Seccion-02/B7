@@ -46,6 +46,6 @@ public interface LlegadaClienteRepository extends JpaRepository<Reserva, Long> {
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO LlegadaCliente (LlegadaCliente_id, ReservaId, FechaLlegada) VALUES ( parranderos_sequence.nextval , :ReservaId,:FechaLlegada)", nativeQuery = true)
+    @Query(value = "INSERT INTO LlegadaCliente (LlegadaCliente_id, ReservaId, FechaLlegada) VALUES ( secuenciallegada.nextval , :ReservaId,:FechaLlegada)", nativeQuery = true)
     void insertarLlegada(@Param("ReservaId") String ReservaId, @Param("FechaLlegada") Data FechaLlegada);    
 }
