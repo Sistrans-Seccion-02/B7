@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Diagramas Hotel" id="296DBCF3-0733-0DCE-0E37-F87D77891DF4" version="3.5">
-<createdBy>JUAN PABLO</createdBy>
-<createdTime>2023-10-01 22:03:52 UTC</createdTime>
-<ownerDesignName>Diagramas Hotel</ownerDesignName>
-<capitalNames>false</capitalNames>
-<designId>296DBCF3-0733-0DCE-0E37-F87D77891DF4</designId>
-</OSDM_Design>
