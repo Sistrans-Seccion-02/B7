@@ -84,6 +84,11 @@ GROUP BY FECHADELCONSUMO
 ORDER BY IngresosTotales DESC;
 
 
+CREATE INDEX idx_fechallegada ON reservaciones(FECHALLEGADA);
+
+SELECT * FROM reservaciones;
+
+
 
 --REQ 7
 
@@ -344,6 +349,20 @@ END;
 
 
 
+SELECT * FROM estadias;
+DELETE FROM estadias;
+
+SELECT * FROM cuentasconsumo;
+DELETE FROM cuentasconsumo;
+
+SELECT * FROM reservaciones;
+DELETE FROM reservaciones;
+
+SELECT * FROM habitaciones;
+DELETE FROM habitaciones;
+
+SELECT * FROM clientes;
+DELETE FROM clientes;
 
 
 
@@ -377,7 +396,7 @@ BEGIN
   n_cuentas := v_cuentaconsumo_ids.COUNT;
   
   -- Iniciar el bucle para insertar los registros
-  FOR i IN 1..300 LOOP
+  FOR i IN 1..4000 LOOP
     BEGIN
       v_id := v_id + 1; -- Incrementar el ID basado en el máximo actual
       -- Seleccionar un ID aleatorio de las colecciones
@@ -415,7 +434,7 @@ END;
 
 --SCRIPT CUENTASCONSUMO
 BEGIN
-    FOR i IN 1..400 LOOP
+    FOR i IN 1..750000 LOOP
         INSERT INTO cuentasconsumo (
             ID,
             COSTOTOTAL,
@@ -452,43 +471,58 @@ CREATE SEQUENCE reserva_seq
 
 -- Iniciar el script para insertar los registros
 DECLARE
+    TYPE t_habitacion_id IS TABLE OF habitaciones.ID%TYPE INDEX BY PLS_INTEGER;
+    v_habitaciones t_habitacion_id;
     v_fechallegada DATE;
     v_fechasalida DATE;
     v_hotel_id NUMBER;
     v_planconsumo_id NUMBER;
+    v_habitacion_id NUMBER;
+    v_count NUMBER;
 BEGIN
-    FOR i IN 1..80000 LOOP
+    -- Cargar todos los IDs de habitación en la colección
+    SELECT ID BULK COLLECT INTO v_habitaciones FROM habitaciones;
+
+    v_count := v_habitaciones.COUNT;
+
+    FOR i IN 1..40000 LOOP
         -- Generar fechas aleatorias para llegada y salida
         v_fechallegada := TRUNC(SYSDATE) + DBMS_RANDOM.VALUE(0, 365);
         v_fechasalida := v_fechallegada + DBMS_RANDOM.VALUE(1, 15);
 
         -- Asignar HOTEL_ID de manera aleatoria
-        v_hotel_id := DBMS_RANDOM.VALUE(1, 3);
+        v_hotel_id := TRUNC(DBMS_RANDOM.VALUE(1, 4));
 
         -- Asignar PLANCONSUMO_ID basado en HOTEL_ID
         IF v_hotel_id = 1 THEN
-            v_planconsumo_id := DBMS_RANDOM.VALUE(1, 3);
+            v_planconsumo_id := TRUNC(DBMS_RANDOM.VALUE(1, 4));
         ELSIF v_hotel_id = 2 THEN
             v_planconsumo_id := 3;
         ELSE
-            v_planconsumo_id := DBMS_RANDOM.VALUE(1, 2);
+            v_planconsumo_id := TRUNC(DBMS_RANDOM.VALUE(1, 3));
         END IF;
+
+        -- Seleccionar un HABITACION_ID aleatorio de la colección precargada
+        v_habitacion_id := v_habitaciones(TRUNC(DBMS_RANDOM.VALUE(1, v_count)));
 
         INSERT INTO reservaciones (ID, FECHALLEGADA, FECHASALIDA, TIPOHABITACION_ID, CANTIDADPERSONAS, HOTEL_ID, PLANCONSUMO_ID, TITULAR_ID, HABITACION_ID)
         VALUES (reserva_seq.NEXTVAL,
                 v_fechallegada,
                 v_fechasalida,
-                DBMS_RANDOM.VALUE(1, 3), -- Tipo de habitación
-                DBMS_RANDOM.VALUE(1, 3), -- Cantidad de personas
+                TRUNC(DBMS_RANDOM.VALUE(1, 4)), -- Tipo de habitación
+                TRUNC(DBMS_RANDOM.VALUE(1, 4)), -- Cantidad de personas
                 v_hotel_id,
                 v_planconsumo_id,
                 TRUNC(DBMS_RANDOM.VALUE(100040457, 100041581)), -- Titular ID
-                TRUNC(DBMS_RANDOM.VALUE(1, 500)) -- Habitación ID
+                v_habitacion_id -- HABITACION_ID seleccionado de la colección
                );
     END LOOP;
     COMMIT; -- Asegurarse de confirmar las transacciones
 END;
 /
+
+
+
 
 
 --SCRIPT HABITACIONES
@@ -500,7 +534,7 @@ CREATE SEQUENCE habitacion_seq
 
 -- Iniciar el script para insertar los registros
 BEGIN
-    FOR i IN 1..500 LOOP
+    FOR i IN 1..730000 LOOP
         INSERT INTO habitaciones (ID, COSTONOCHE, HOTEL_ID, TIPO_HABITACION_ID)
         VALUES (habitacion_seq.NEXTVAL, -- Genera el siguiente ID de la secuencia
                 TRUNC(dbms_random.value(50, 200), 2), -- Genera un costo por noche aleatorio entre 50 y 200
@@ -524,7 +558,7 @@ DECLARE
   v_email VARCHAR2(100);
   v_telefono VARCHAR2(20);
 BEGIN
-  FOR i IN 1..100000 LOOP -- Ya tienes 10, entonces agregas 99990 más
+  FOR i IN 1..730000 LOOP -- Ya tienes 10, entonces agregas 99990 más
     v_cedula := v_cedula + 1;
 
     IF MOD(i, 2) = 0 THEN
