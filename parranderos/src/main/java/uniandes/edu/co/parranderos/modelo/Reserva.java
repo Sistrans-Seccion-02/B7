@@ -1,11 +1,11 @@
 package uniandes.edu.co.parranderos.modelo;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
@@ -23,10 +23,11 @@ public class Reserva {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
+    @Column(name="FECHALLEGADA")
     private Date fechaLlegada;
+    @Column(name="FECHASALIDA")
     private Date fechaSalida;
-    private Boolean pazYsalvo;
+    @Column(name="CANTIDADPERSONAS")
     private Integer cantidadPersonas;
 
     @ManyToOne
@@ -37,19 +38,24 @@ public class Reserva {
     @JoinColumn(name="planconsumo_id", referencedColumnName = "id")
     private PlanConsumo planConsumo;
 
+    @ManyToOne
+    @JoinColumn(name="tipohabitacion_id", referencedColumnName = "id")
+    private TipoHabitacion tipoHabitacion;
+
+    @ManyToOne
+    @JoinColumn(name="titular_id", referencedColumnName = "cedula")
+    private Cliente titular;
+
     @OneToMany(mappedBy="reserva")
     private List<Cliente> titulares;
 
     @OneToMany(mappedBy="reserva")
     private List<Cliente> acompañantes;
 
-    @ManyToMany
-    private List<Habitacion> habitaciones;
-
     @ManyToOne
-    @JoinColumn(name="cuentaconsumo_id", referencedColumnName = "id")
-    private CuentaConsumo cuentaConsumo;
+    @JoinColumn(name="habitacion_id", referencedColumnName = "id")
+    private Habitacion habitacion;
 
-    public Reserva(){;}
+    public Reserva() {;}
+
 }
-
