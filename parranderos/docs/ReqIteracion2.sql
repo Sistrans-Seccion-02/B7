@@ -5,6 +5,9 @@ FROM cuentasconsumo
 WHERE FECHADELCONSUMO BETWEEN ADD_MONTHS(SYSDATE, -12) AND SYSDATE
 GROUP BY HABITACION;
 
+SELECT * FROM cuentasconsumo;
+CREATE INDEX idx_fechadelconsumo ON CUENTASCONSUMO(FECHADELCONSUMO);
+
 --REQ 2
 
 SELECT 
@@ -20,6 +23,10 @@ ORDER BY
     VECESSOLICITADO DESC
 FETCH FIRST 20 ROWS ONLY;
 
+SELECT * FROM solicitudes_servicios; 
+CREATE INDEX idx_fecha_solicitud ON solicitudes_servicios(FECHA_SOLICITUD);
+
+
 ---REQ 3
 SELECT * FROM reservaciones;
 
@@ -28,6 +35,8 @@ SELECT HABITACION_ID,
 FROM reservaciones 
 WHERE FECHALLEGADA BETWEEN ADD_MONTHS(SYSDATE, -12) AND SYSDATE 
 GROUP BY HABITACION_ID;
+
+CREATE INDEX idx_fechallegada ON reservaciones(FECHALLEGADA);
 
 --REQ 4
 
@@ -38,6 +47,14 @@ AND
     (FECHA_SOLICITUD BETWEEN TO_DATE(:fecha_inicio, 'DD-MON-YY') AND TO_DATE(:fecha_fin, 'DD-MON-YY') OR (:fecha_inicio IS NULL AND :fecha_fin IS NULL))
 AND 
     (SERVICIO_TYPE LIKE '%' || :nombre_servicio || '%' OR :nombre_servicio IS NULL);
+
+SELECT * FROM solicitudes_servicios; 
+
+CREATE INDEX idx_servicio_type ON solicitudes_servicios(SERVICIO_TYPE);
+
+CREATE INDEX idx_fecha_solicitud ON solicitudes_servicios(FECHA_SOLICITUD);
+
+CREATE INDEX idx_costo ON solicitudes_servicios(COSTO);
 
 
 --REQ 5
@@ -533,13 +550,3 @@ END;
 
 
 
-
-
-
-SELECT * FROM reservaspas;
-SELECT * FROM reservasalas;
-SELECT * FROM reservasextras;
-
-
-
-CREATE INDEX idx_reservaciones_id ON reservaciones (ID);
